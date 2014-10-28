@@ -1,22 +1,15 @@
 lucy-blog
 =========
 ```js
-{
-  "lucy_def": "phonegap",
-  "files": [{
-    "from": "www/config.xml"
-  }, {
-    "from": "www/index.html"
-  }, {
-    "from": "www/css/*",
-    "method": "copy"
-  }, {
-    "from": "www/js/*",
-    "method": "copy"
-  }],
-
-  "js_scripts": [
-    "icongen.js"
-  ]
+exports.run = function(dirs, config, next) {
+  if (!config.icon) {
+    return next();
+  }
+  var icon = config.icon;
+  var iconPath = icon.indexOf('/') === 0 ? icon : dirs.destDir + '/' + icon;
+  makeDirs(dirs.destDir, function() {
+    runAllConverts(iconPath, config.splash_background);
+    next();
+  });
 }
 ```
