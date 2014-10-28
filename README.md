@@ -2,25 +2,34 @@ lucy-blog
 =========
 ```js
 {
-  "appName": "Lucy's Phonegap Test",
-  "appDescription": "A test of the command: lucy build phonegap",
-  "packageName": "com.lucytest",
-  "authorName": "Lucy Goose",
-  "authorEmail": "lucy@bbrennan.info",
-  "authorUrl": "bbrennan.info",
-  "phonegapVersion": "3.5.0",
-  "orientation": "default",
-  "useFullscreen": "false",
-  "icon": "icon.png",
-  "splash_background": "#0A1244",
-  "plugins": [
-    "camera",
-    "contacts",
-    "com.phonegap.plugins.pushplugin"
-  ],
-  "externalDomains": [
-    "http://www.mysite.com/",
-    "http://*.google.com/"
-  ]
+  "name": "phonegap",
+  "description": "A package for getting started with PhoneGap Build",
+  "sample_input": {
+    "appName": "Hello World",
+    "appDescription": "A starter kit for PhoneGap build",
+    "packageName": "com.foo.helloworld",
+    "authorName": "John Doe",
+    "authorEmail": "john@doe.com",
+    "authorUrl": "doe.com",
+    "phonegapVersion": "3.1.0",
+    "orientation": "default",
+    "useFullscreen": "true",
+    "plugins": [
+       "camera",
+       "contacts",
+       "com.phonegap.plugins.pushplugin"
+    ],
+    "externalDomains": [
+       "http://www.mysite.com/",
+       "http://*.google.com/"
+    ],
+    "icon": "path/to/icon.svg",
+    "splash_background": "#FFFFFF"
+  },
+  "defaults": {
+    "useFullscreen": true,
+    "orientation": "default",
+    "externalDomains": [ "*" ]
+  }
 }
 ```
